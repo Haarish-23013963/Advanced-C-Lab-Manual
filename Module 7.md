@@ -272,7 +272,41 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+#include <stdlib.h>
+struct Subject
+{
+    char name[20];
+    int marks;
+};
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    struct Subject *s = (struct Subject *)malloc(n*sizeof(struct Subject));
+    if(s==NULL)
+    {
+        printf("Memory Alocation Failed\n");
+        return 1;
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%s %d",s[i].name,&s[i].marks);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%s  %d\n",s[i].name,s[i].marks);
+    }
+    
+    free (s);
+    
+    return 0;
+}
+
+
+
+```
 
 
 
@@ -280,7 +314,9 @@ Program:
 Output:
 
 
-//paste your output here
+
+![Screenshot 2025-04-25 102526](https://github.com/user-attachments/assets/297a272e-1888-4dcc-a7ce-9b03c9c2bac3)
+
 
 
 
